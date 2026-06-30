@@ -1,0 +1,620 @@
+\documentclass{report}
+
+\input{Preamble}
+\input{letterfonts}
+
+\title{\Huge{Pure Mathematics U2 2026 P2 Solutions}}
+\author{\huge{Joshua Sampath}\vspace{12pt}\\
+\texttt{joshuasampath07@gmail.com}}
+\date{Compiled June 18, 2026}
+
+\begin{document}
+\maketitle
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Joshua Sampath}
+\rfoot{\texttt{joshuasampath07@gmail.com}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\chapter*{MODULE 1}
+\vspace{-30pt}
+\section*{Question 1}
+\vspace{8pt}
+\qs{1}{(a)}{Express the complex number $\dfrac{5-3i}{4+2i}$ in the form $x+yi$ where $x$ and $y$ are constants.
+}{4}
+
+\solu{
+	Let: $z=\dfrac{5-3i}{4+2i}$\\
+	$z=\dfrac{5-3i}{4+2i} \times \dfrac{4-2i}{4-2i}$ \hfill $\times$ \ $\overline{z}$\\
+	$z=\dfrac{20-10i-12i+6i^2}{16 -8i +8i -4i^2}$\hfill Re: $i^2=-1$\\
+	$z=\dfrac{14-22i}{16+4}$\\
+	$z=\dfrac{14-22i}{20}$ \\
+	$z=\dfrac{7}{10} - \dfrac{11}{10}i$
+}
+
+\pagebreak
+
+\qs{1}{(b)(i)}{Let: $z=-1+\sqrt{3}i$\\
+	Calculate the EXACT value of $\lvert z \rvert$.}{2}
+
+
+\solu{$\lvert z \rvert= \sqrt{(-1)^2+(\sqrt{3})^2}$\\
+	$\lvert z \rvert= \sqrt{4}$\\
+	$\lvert z \rvert=2$ \hfill $\lvert z \rvert \in \mathbb{R}^+$
+}
+
+\qs{1}{(b) (i) (b)}{arg$(z)$}{2}
+
+\solu{arg$(z)=\pi- \alpha$ \hfill As $z$ lies within the $2^{nd}$ Quadrant\\
+	Where: $\alpha=\arctan \left( \dfrac{\sqrt{3}}{1} \right)$\\
+	$\alpha=\dfrac{\pi}{3}$\\
+	arg$(z)=\pi- \dfrac{\pi}{3}$\\
+	arg$(z)=\dfrac{2\pi}{3}$
+}
+\newpage
+
+\qs{1}{(b) (ii)}{Hence, use de Moivre's theorem to determine the value of $z^{12}$.}{4}
+
+\solu{Re: $z=-1+\sqrt{3}i\ \text{,} |z|=2\ \text{, arg}(z)=\dfrac{2\pi}{3}$\\
+	$z=2 \left( \cos{\dfrac{2\pi}{3}} + i\sin{\dfrac{2\pi}{3}} \right)$\hfill is of Polar Form\\
+	$z^{12}=\left[2 \left( \cos{\dfrac{2\pi}{3}} + i\sin{\dfrac{2\pi}{3}} \right) \right]^{12}$\\
+	$z^{12}=2^{12} \left( \cos{\dfrac{2\pi}{3}} + i\sin{\dfrac{2\pi}{3}} \right)^{12}$\\
+	$z^{12}=4096 \left( \cos{\dfrac{24\pi}{3}} + i\sin{\dfrac{24\pi}{3}} \right)$ \hfill By de Moivre's Theorem\\
+	$z^{12}=4096 ( 1 + 0)$\\
+	$z^{12}=4096$
+}
+
+\qs{1}{(c)}{The equation of a curve is $y^3 +3x^2y+x=6$. Determine an expression for $\dfrac{dy}{dx}$ in terms of $x$ and $y$.}{6}
+
+\solu{$y^3 +3x^2y+x=6$\\
+	$3y^2\displaystyle\odv{y}{x} +3 \left[2xy + x^2\displaystyle\odv{y}{x} \right]+1=0$\\
+	$3y^2\displaystyle\odv{y}{x} +6xy + 3x^2\displaystyle\odv{y}{x} +1=0$\\
+	$\displaystyle\odv{y}{x} \left[ 3y^2+3x^2\right]+6xy+1=0$\\
+	$\displaystyle\odv{y}{x}=\dfrac{-(6xy+1)}{3(y^2+x^2)}$
+}
+
+\qs{1}{(d)}{Show that $y=-x+\dfrac{\pi}{2}$ is the tangent to the curve $y=\ln\sqrt{1+\sin{2x}}$ at the point where $x=\dfrac{\pi}{2}$.}{7}
+
+\solu{\textbf{R.T.P}: $y=-x+\dfrac{\pi}{2}$
+
+	\textbf{Proof}:\\
+	$y=\dfrac{1}{2}ln\left(1+\sin{2x}\right)$\\
+	$\displaystyle\odv{y}{x}=\dfrac{1}{2} \left[\dfrac{2\cos2x}{1+\sin2x} \right]$\\
+	$\displaystyle\odv{y}{x}=\dfrac{1}{2} \left[\dfrac{2\cos2x}{1+\sin2x} \right]$\\
+	$\displaystyle\odv{y}{x}= \dfrac{\cos2x}{1+\sin2x} $\\
+	\vspace{12pt}
+	When $x=\dfrac{\pi}{2}$:\\
+	\begin{minipage}[t]{0.45\textwidth}
+		$\displaystyle\odv{y}{x}= \dfrac{\cos\pi}{1+\sin\pi} $\\
+		$\displaystyle\odv{y}{x}=-1$\\
+	\end{minipage}
+	\vline
+	\hspace{0.5cm}
+	\begin{minipage}[t]{0.45\textwidth}
+		$y=\dfrac{1}{2}ln\left(1+\sin{\pi}\right)$\\
+		$y=0$\\
+		$\implies\left( \dfrac{\pi}{2},0\right)$
+	\end{minipage}
+	\vspace{10pt}
+	\tcblower
+	\vspace{10pt}
+	$y-0=-1\left( x-\dfrac{\pi}{2}\right)$ \hfill Re: $y-y_1=\displaystyle\odv{y}{x}\left( x-x_1\right)$\\
+	$y=-x+\dfrac{\pi}{2}$ \vspace{-4pt}\\
+	\hspace*{2cm} \textbf{Q.E.D.}\\
+}
+\newpage
+\section*{Question 2}
+\vspace{8pt}
+
+\qs{2}{(a)(i)}{Apply the trapezium rule with THREE equal intervals to estimate the value of $\displaystyle{\int_{0}^{\pi/3} \tan x}\odif{x}$
+}{4}
+
+\solu{Re: $ \int_{a}^{b} f(x) \odif{x} \approx \frac{h}{2} \left[ y_0 + y_n + 2(y_1 + y_2 + \dots + y_{n-1}) \right]$\\
+	$h=\dfrac{\frac{\pi}{3}-0}{3}=\dfrac{\pi}{9}$
+
+	\begin{center}
+		\begin{tabular}{| Sc | Sc | Sc | Sc | Sc |}
+			\hline
+			$x$    & $0$ & $\dfrac{\pi}{9}$ & $\dfrac{2\pi}{9}$ & $\dfrac{\pi}{3}$ \\
+			\hline
+			$f(x)$ & $0$ & $0.3640$         & $0.8391$          & $\sqrt{3}$       \\
+			\hline
+		\end{tabular}
+	\end{center}
+
+	$ \int_{0}^{\pi/3} \tan{x} \odif{x} \approx   \dfrac{1}{2} \times \dfrac{\pi}{9} \left[0 + \sqrt{3} + 2(0.3640 + 0.8391) \right]$\\
+	$ \int_{0}^{\pi/3} \tan{x} \odif{x} \approx 0.722$ (3 s.f.)
+}
+
+\qs{2}{(a)(ii)}{Using an appropriate trigonometric identity, determine the EXACT value of $\displaystyle{\int_{0}^{\pi/3} \tan x \odif{x}}$}{4}
+
+\solu{\vspace*{-\baselineskip}
+	\begin{flalign*}
+		- & \int_{0}^{\pi/3} \dfrac{-\sin x}{\cos x} \odif{x}                        &  & \hfill \text{Re:} \ \tan{x} = \dfrac{\sin{x}}{\cos{x}}             \\
+		  & =\left[ \ \ln|\sec {x}| \ \right]_{0}^{\pi/3}                            &  & \hfill \text{Re:} -\ln{\cos{x}}=\ln{\sec{x}}                       \\
+		  & =\left[ \ln{\sec {\dfrac{\pi}{3}}} \right] - \left[ \ln{\sec{0}} \right]                                                                         \\
+		  & = \ln{2}-\ln{1}                                                          &  & \hfil \dfrac{1}{\cos{\frac{\pi}{3}}}=2 \qquad \dfrac{1}{\cos{0}}=1 \\
+		  & =\ln{2} \ \text{(exact form)}
+	\end{flalign*}
+}
+\pagebreak
+\qs{2}{(b)}{Use the substitution $u=\cos^{-1}\left(\frac{1}{2}x\right)$ to show that $\displaystyle{\int_{0}^{1} \dfrac{\cos^{-1}\left(\frac{1}{2}x\right)}{\sqrt{4-x^2}}}\odif{x}=\dfrac{5\pi^2}{72}$.}{7}
+
+\solu{\textbf{R.T.P:} $\displaystyle{\int_{0}^{1} \dfrac{\cos^{-1}\left(\frac{1}{2}x\right)}{\sqrt{4-x^2}}}\odif{x}=\dfrac{5\pi^2}{72}$\\
+	\textbf{Proof:}\\
+	\linespread{3.2}\selectfont
+	$u=\cos^{-1}\left(\frac{1}{2}x\right)$ \hfill$u=\cos^{-1}\left(\frac{1}{2}\times 0\right)=\frac{\pi}{2}$  \qquad $u=\cos^{-1}\left(\frac{1}{2}\times 1\right)=\frac{\pi}{3}$ \\
+	$\displaystyle\odv{u}{x} = -\dfrac{ \frac{1}{2} }{ \sqrt{1 - \left( \frac{x}{2} \right)^2} }$\\
+	$\displaystyle\odv{u}{x} = -\dfrac{ 2 }{ 2\sqrt{4 \left( 1 - \left( \frac{x}{2} \right)^2  \right)} }$ \hfill $-\dfrac{1}{ 2\sqrt{1 - \left( \frac{x}{2} \right)^2} } \times \dfrac{ \sqrt{4} }{ \sqrt{4} }$\\
+	$\displaystyle\odv{u}{x} = -\dfrac{ 1 }{ \sqrt{4 - x^2 } }$ \\
+	$-\displaystyle\odif{u} = \dfrac{ 1 }{ \sqrt{4 - x^2 } }\odif{x}$ \hfill Substitute into $\int$\\
+	$\displaystyle{-\int_{\frac{\pi}{2}}^{\frac{\pi}{3}} u \odif{u}}$\\
+	$=-\left[ \dfrac{u^2}{2}\right]^{\frac{\pi}{3}}_{\frac{\pi}{2}}$\\
+	$=-\left[ \dfrac{\left(\frac{ \pi}{3} \right)^2}{2}- \dfrac{\left( \frac{\pi}{2}\right)^2}{2}\right]$\\
+	$=\dfrac{\pi^2}{8}-  \dfrac{\pi^2}{18}$\\
+	$=\dfrac{5\pi^2}{72}$\\[-12pt]
+	\hspace*{1.5cm} \textbf{Q.E.D.}
+}
+\pagebreak
+
+
+\qs{2}{(c)(i)}{It is given that $I_n=\displaystyle\int_0^{\pi} \sin^n{\theta} \odif{\theta}$ for integers $n\geq0$.\\[6pt]
+	Show that $I_n=\dfrac{n-1}{n} I_{n-2}$}{6}
+
+\solu{$I_n=\displaystyle\int_0^{\pi} \sin^{n-1}{\theta} \cdot \sin{\theta} \odif{\theta}$\\
+	Let:\\
+	\begin{tabular}{l@{\hspace{1.5cm}}l}
+		$u = \sin^{n-1} \theta$ \qquad                                              & $\mathrm{d}v = \sin \theta \,\mathrm{d}\theta$ \\[6pt]
+		$\displaystyle\odv{u}{\theta} = (n-1) \cos \theta \sin^{n-2} \theta$ \qquad & $v = -\cos \theta$
+	\end{tabular}\vspace{8pt}\\
+	$I_n=\left. -\cos{\theta}\sin^{n-1}{\theta} \ \right|_{0}^{\pi}   -(n-1)\displaystyle\int_0^\pi-\cos^2{\theta}\sin^{n-2} {\theta} \odif{\theta}$\\
+	$I_n= 0 +(n-1)\displaystyle\int_0^\pi\left( 1- \sin^2{\theta} \right) \sin^{n-2} {\theta} \odif{\theta}$ \hfill $\sin^{n-1}{(0)}=0$ \qquad $\sin^{n-1}{(\pi)}=0$
+	$I_n=(n-1)\displaystyle\int_0^\pi \sin^{n-2} {\theta} - \sin^n{\theta} \odif{\theta}$ \\
+	$I_n=(n-1) \left(  I_{n-2}-I_n\right)$\\
+	$I_n+(n-1)\left(I_n\right)=(n-1)I_{n-2}$\\
+	$I_n(1+n-1)=(n-1)I_{n-2}$\\
+	$I_n=\dfrac{n-1}{n}I_{n-2}$ \hfill $n \geq2$\\
+	\hspace*{2.3cm} \textbf{Q.E.D.}
+}
+\pagebreak
+
+\qs{2}{(ii)(a)}{Verify that $I_1=2$.}{2}
+\solu{$I_n=\displaystyle\int_0^{\pi} \sin^n{\theta} \odif{\theta}$\\
+	When $n=1$:\\
+	$I_1= \displaystyle\int_0^\pi \sin{\theta} \odif{\theta}$\\
+	$I_1= \left[ -\cos{\theta}\right]_0^\pi$\\
+	$I_1= \left[ -\cos{\pi}\right]- \left[ -\cos{0}\right] $\\
+	$I_1= -(-1)+ 1 $\\
+	$I_1= 2$\\[-12pt]
+	\hspace*{1.5cm} \textbf{Q.E.D.}
+}
+
+\qs{2}{(ii)(b)}{Hence, determine the value of $I_7$}{2}
+\solu{ $I_7=\dfrac{6}{7} I_5 \implies I_5=\dfrac{4}{5} I_3 \implies I_3=\dfrac{2}{3} I_1$ \\ Re: $I_1= 2$\\
+	$I_3=\dfrac{2}{3} \times2=\dfrac{4}{3}$\\
+	$I_5=\dfrac{4}{5} \times \left( \dfrac{4}{3} \right)= \dfrac{16}{15}$\\
+	$I_7=\dfrac{6}{7} \left( \dfrac{16}{15} \right)$\\
+	$I_7=\dfrac{32}{35}$
+}
+\pagebreak
+
+\chapter*{Module 2}
+\vspace{-30pt}
+\section*{Question 3}
+\qs{3}{(a)(i)}{Consider the sequence $\{a_n\}$ where
+	\begin{center}
+		$a_n=\dfrac{1}{3^{n-1}}$\\
+	\end{center}
+	for positive integers $n$.\\
+	state the values of the first four terms of the sequence, $a_1$, $a_2$, $a_3$ and $a_4$}{2}
+
+\solu{$a_1=\dfrac{1}{3^{1-1}}=1$\qquad
+	$a_2=\dfrac{1}{3^{2-1}}=\dfrac{1}{3}$ \qquad
+	$a_3=\dfrac{1}{3^{3-1}}=\dfrac{1}{9}$ \qquad
+	$a_4=\dfrac{1}{3^{4-1}}=\dfrac{1}{27}$\\[8pt]
+	$\left\{a_1, a_2, a_3 , a_4: 1, \dfrac{1}{3}, \dfrac{1}{9} , \dfrac{1}{27}\right\}$
+}
+\qs{3}{(a)(ii)}{Show that the sequence converges.}{2}
+\solu{$\lim\limits_{n\to\infty} a_n =\dfrac{1}{3^{n-1}}\\
+		=\dfrac{1}{\infty}\\
+		=0$
+	\tcbline
+	Since $\lim\limits_{n\to\infty} a_n=l$ \qquad where $l \neq \infty$\\
+	$\implies$ The sequence converges.\\[-12pt]
+	\hspace*{4.5cm} \textbf{Q.E.D.}
+}
+\clearpage
+
+
+\qs{3}{(b)(i)}{Express the series $4+4^2+4^3+\ldots+4^n$ using summation notation.}{2}
+\solu{$4+4^2+4^3+\ldots+4^n=\displaystyle\sum_{r=1}^{n}4^r$}
+
+\qs{3}{(b)(ii)}{Prove by mathematical induction that\\
+	$4+4^2+4^3+\ldots+4^n=\dfrac{4}{3} \left( 4^n-1 \right)$\\
+	for all positive integers $n$.}{8}
+\solu{Re: $4+4^2+4^3+\ldots+4^n=\dfrac{4}{3} \left( 4^n-1 \right)$\\
+	Let $P_n$ be the statement: $\displaystyle\sum_{r=1}^{n}4^r=\dfrac{4}{3} \left( 4^n-1 \right)$ \hfill $\forall n \in \mathbb{Z}^+$. \\
+	\begin{minipage}[t]{0.45\textwidth}
+		When $n=1$\\
+		$4^1=\dfrac{4}{3} \left( 4^1-1 \right)$\\
+		$4=4$ \qquad L.H.S. = R.H.S.\\
+		$\implies$ the statement $P_1$ is true\\
+		Assume true when $n=k$\\
+		$\displaystyle\sum_{r=1}^{k}4^r=\dfrac{4}{3} \left( 4^k-1 \right)$\\[8pt]
+		R.T.P. $\displaystyle\sum_{r=1}^{k+1}4^r=\dfrac{4}{3} \left( 4^{(k+1)} -1  \right)$ \hfill when $n=k+1$
+	\end{minipage}
+	\vline
+	\hspace{0.5cm}
+	\begin{minipage}[t]{0.45\textwidth}
+		Proof:\\
+		$\displaystyle\sum_{r=1}^{k+1}4^r =\dfrac{4}{3} \left( 4^k-1 \right) + 4^{k+1}$\\
+		$\displaystyle\sum_{r=1}^{k+1}4^r =\dfrac{4^{k+1}}{3} -  \dfrac{4}{3} + 4^{k+1}$\\
+		$\displaystyle\sum_{r=1}^{k+1}4^r =4^{k+1} \left( \dfrac{1}{3} + 1 \right) - \dfrac{4}{3} $\\
+		$\displaystyle\sum_{r=1}^{k+1}4^r =4^{k+1} \left( \dfrac{4}{3} \right) - \dfrac{4}{3} $\\
+		$\displaystyle\sum_{r=1}^{k+1}4^r=\dfrac{4}{3} \left( 4^{(k+1)} -1  \right)$\\
+		\hspace*{3.5cm} \textbf{Q.E.D.}
+	\end{minipage}\\
+
+	\tcblower
+	\begin{spacing}{1.5}
+		But this statement is true for $P_k$ such that if $P_k$ is true then $P_{k+1}$ is true. Likewise, if $P_1$ is true, then $P_2$ is true \dots Hence, by P.M.I. , the statement $P_n$ is true $\forall n \in \mathbb{Z}^+$.
+	\end{spacing}
+}
+
+\qs{3}{(c)(i)}{Determine the values of $A$ and $B$ such that\\
+	$\dfrac{4}{(2r+1)(2r+3)}=\dfrac{A}{(2r+1)}+\dfrac{B}{(2r+3)}$}{3}
+\solu{
+	$\dfrac{4}{(2r+1)(2r+3)}=\dfrac{A}{(2r+1)}+\dfrac{B}{(2r+3)}$\\
+	$4=A(2r+3)+B(2r+1)$ \hfill $\times(2r+1)(2r+3)$\\
+	\begin{minipage}[t]{0.45\textwidth}
+		\begin{spacing}{1.5}
+			When $r=-\dfrac{1}{2}$\\
+			$4=A \left[ 2 \left(-\dfrac{1}{2}\right) +3 \right] +0$\\
+			$4=2A$\\
+			$A=2$
+		\end{spacing}
+	\end{minipage}
+	\vline
+	\hspace{0.5cm}
+	\begin{minipage}[t]{0.45\textwidth}
+		\begin{spacing}{1.5}
+			When $r=0$\\
+			$4=2(0+3)+B(0+1)$\\
+			$4=6+B$\\
+			$B=-2$
+		\end{spacing}
+	\end{minipage}\\
+
+	$\dfrac{4}{(2r+1)(2r+3)}=\dfrac{2}{(2r+1)}+\dfrac{-2}{(2r+3)}$\\
+	Where $A=2$ and $B=-2$
+}
+
+\qs{3}{(c)(ii)}{Hence, use the method of differences to show that\\
+	$\displaystyle\sum_{r=1}^{n}\dfrac{4}{(2r+1)(2r+3)}=2 \left( \dfrac{1}{3} - \dfrac{1}{2n+3} \right)$
+}{5}
+\solu{Proof:\\
+	Re:$\dfrac{4}{(2r+1)(2r+3)}=2 \left(\dfrac{1}{(2r+1)}-\dfrac{1}{(2r+3)} \right)$\\
+	$\displaystyle\sum_{r=1}^{n}\dfrac{4}{(2r+1)(2r+3)}=2 \left[\left(\dfrac{1}{3}-\cancel{\dfrac{1}{5}}\right) + \left(\cancel{\dfrac{1}{5}}-\cancel{\dfrac{1}{7}}\right) + \ldots \left(\cancel{\dfrac{1}{2n-1}}-\cancel{\dfrac{1}{2n+1}}\right) + \left(\cancel{\dfrac{1}{2n+1}}-\cancel{\dfrac{1}{2n+3}}\right) \right]$\\
+	$\displaystyle\sum_{r=1}^{n}\dfrac{4}{(2r+1)(2r+3)}=2 \left( \dfrac{1}{3} - \dfrac{1}{2n+3} \right)$ \hfill By the method of differences\\[-8pt]
+	\hspace*{6cm} \textbf{Q.E.D.}
+}
+\newpage
+
+\qs{3}{(c)(iii)}{Hence, calculate\\
+	$\displaystyle\sum_{r=1}^{\infty}\dfrac{4}{(2r+1)(2r+3)}$
+}{3}
+\solu{
+	\begin{spacing}{5}
+		Re:$\displaystyle\sum_{r=1}^{n}\dfrac{4}{(2r+1)(2r+3)}=2 \left( \dfrac{1}{3} - \dfrac{1}{2n+3} \right)$
+
+		$\displaystyle\sum_{r=1}^{\infty}\dfrac{4}{(2r+1)(2r+3)}=2 \left( \dfrac{1}{3} - \dfrac{1}{(2\times\infty)+3} \right)$
+
+		$\displaystyle\sum_{r=1}^{\infty}\dfrac{4}{(2r+1)(2r+3)}=2 \left( \dfrac{1}{3} - \dfrac{1}{\infty} \right)$
+
+		$\displaystyle\sum_{r=1}^{\infty}\dfrac{4}{(2r+1)(2r+3)}=2 \left( \dfrac{1}{3} - 0 \right)$
+	\end{spacing}
+	$\displaystyle\sum_{r=1}^{\infty}\dfrac{4}{(2r+1)(2r+3)}=\dfrac{2}{3}$
+}
+\newpage
+\section*{Question 4}
+\qs{4}{(a)}{Obtain the Maclaurin series expansion of $f(x)=e^{2x}$ up to and including the term in $x^4$.}{3}
+\solu{
+	Re: $f(x)=f(0) + \dfrac{f^{\prime}(0)}{1!}x +   \dfrac{f^{\prime\prime}(0)}{2!}x^2 + \dfrac{f^{\prime\prime\prime}(0)}{3!}x^3  \ldots$\\
+	$f(x)=e^{2x}$ \qquad $f(0)=1$ \\ [-5pt]
+	$f^{\prime}(x)=2e^{2x}$  \qquad $f^{\prime}(0)=2$\\[-5pt]
+	$f^{\prime\prime}(x)=4e^{2x}$  \qquad $f^{\prime\prime}(0)=4$\\[-5pt]
+	$f^{\prime\prime\prime}(x)=8e^{2x}$  \qquad $f^{\prime\prime\prime}(0)=8$\\[-5pt]
+	$f^{(4)}(x)=16e^{2x}$  \qquad $f^{(4)}(0)=16$\\
+	$e^{2x}=1 + 2x + \dfrac{4}{2!}x^2 +\dfrac{8}{3!}x^3 + \dfrac{16}{4!}x^4  + \ldots$\\
+	$e^{2x}=1 + 2x + 2x^2 + \dfrac{4}{3}x^3 + \dfrac{2}{3}x^4 + \ldots$
+}
+
+\qs{4}{(b)}{Obtain the binomial expansion of $(8+x)^{\frac{1}{3}}$ in ascending powers of $x$, up to and including the term in $x^2$. State the values of $x$ for which the expansion is valid.}{6}
+
+\solu{Let: $f(x)=(8+x)^{\frac{1}{3}}$\\
+	$f(x)= 8^{\frac{1}{3}} \left(1+\dfrac{x}{8} \right)^{\frac{1}{3}}$\\
+	$f(x)= 2 \left[ 1+ \left(\dfrac{1}{3}\right)\dfrac{x}{8} +\dfrac{\left(\dfrac{1}{3}\right)\left(\dfrac{1}{3}-1\right)}{2!} \left( \dfrac{x}{8} \right)^2 + \ldots \right]$\\ [4pt]
+	$f(x)= 2 \left[ 1 + \dfrac{x}{24} - \dfrac{x^2}{576} + \ldots \right]$ \hfill The expansion is valid for: $  \left| \dfrac{x}{8} \right| < 1$ \\
+	$f(x)= 2 + \dfrac{x}{12} - \dfrac{x^2}{288} + \ldots$ \hfill $ -8 < x < 8$ \qquad $\forall x \in \mathbb{R}$
+}
+\newpage
+
+\qs{4}{(c)(i)}{Using the intermediate value theorem, show that $\cos{x}=xe^{-x}$ has a root between $x=1$ and $x=1.5$.}{3}
+
+\solu{Let: $f(x)=\cos{x}-xe^{-x}$\\
+	$f(1)=\cos{(1)}-(1)e^{-1} = 0.172$ \qquad $+$ve\\
+	$f(1.5)=\cos{(1.5)}-(1.5)e^{-1.5} = -0.264$ \qquad $-$ve
+	\tcblower
+	Since $f(1) \cdot f(1.5) < 0$, and $f(x)$ is continuous within the interval, then a root $\alpha$ must exist between $(1 , 1.5)$.
+}
+
+\qs{(4)}{(c)(ii)}{Hence, use the method of interval bisection to determine, correct to 1 decimal place, the approximate root of $\cos{x}=xe^{-x}$ which lies in the interval $(1, 1.5)$.}{6}
+
+\solu{Re: $f(x)=\cos{x}-xe^{-x}$\\
+	$x_1= \dfrac{1 + 1.5}{2}=1.25$ \hfill $f(1.25)=\cos{(1.25)}-(1.25)e^{-1.25} = -0.0428$ \qquad $-$ve\\ [-4pt]
+	Since $f(1) \cdot f(1.25) < 0$, then $\alpha$ must exist between $(1 , 1.25)$.
+	\tcbline
+	$x_2= \dfrac{1 + 1.25}{2}=1.125$ \hfill $f(1.125)=\cos{(1.125)}-(1.125)e^{-1.125} =0.066$ \qquad $+$ve\\[-4pt]
+	Since $f(1.125) \cdot f(1.25) < 0$, then $\alpha$ must exist between $(1.125 , 1.25)$.
+	\tcbline
+	$x_3= \dfrac{1.125 + 1.25}{2}=1.1875$ \hfill $f(1.1875)=\cos{(1.1875)}-(1.1875)e^{-1.1875} =0.012$ \qquad $+$ve\\[-4pt]
+	Since $f(1.1875) \cdot f(1.25) < 0$, then $\alpha$ must exist between $(1.1875 , 1.25)$.
+	\tcbline
+	$x_4= \dfrac{1.1875 + 1.25}{2}=1.21875$ \hfill $f(1.21875)=\cos{(1.21875)}-(1.21875)e^{-1.21875} =-0.015$ \qquad $-$ve\\[-4pt]
+	Since $f(1.1875) \cdot f(1.21875) < 0$, then $\alpha$ must exist between $(1.1875 , 1.21875)$.\\ [-4pt]
+	$\alpha \approx 1.2$ (1 d.p.) \hfill By the interval bisection method
+}
+\newpage
+
+\qs{4}{(d)(i)}{The equation $x^4+x-13=0$ has a root in the interval $(1,2)$.\\
+	Use the Newton-Raphson formula to show that for $n \geq 1$, with a given initial estimate $x_1$,\\[6pt]
+	$x_{n+1}= \dfrac{3x_n^4 +13}{4x_n^3 + 1}$}{4}
+
+\solu{Let: $f(x)=x^4+x-13$\\
+	$f^{\prime}=4x^3+1$\\
+	$x_{n+1}=x_n - \dfrac{x_n^4+x_n-13}{4x_n^3+1}$ \hfill Re: $x_{n+1}=x_n - \dfrac{f(x_n)}{f^{\prime}(x_n)}$\\
+	$x_{n+1}=\dfrac{4x_n^4+x_n - \left( x_n^4+x_n-13 \right)}{4x_n^3+1}$\\
+	$x_{n+1}=\dfrac{3x_n^4+13}{4x_n^3+1}$ \hfill $n \geq 1 \qquad n \in \mathbb{N}$\\
+	\hspace*{2.5cm} \textbf{Q.E.D.}
+}
+
+\qs{4}{(d)(ii)}{Hence, or otherwise, use the Newton-Raphson method with the initial estimate $x_1=2$ to calculate, to 2 decimal places, a new estimate, $x_4$, of the root.}{3}
+
+\solu{Re: $x_{n+1}=\dfrac{3x_n^4+13}{4x_n^3+1}$ \qquad $x_1=2$
+	\tcbline
+	$x_{2}=\dfrac{3(2)^4+13}{4(2)^3+1}= 1.8484$
+	\tcbline
+	$x_{3}=\dfrac{3 \left(1.8484\right)^4+13}{4\left(1.8484\right)^3+1}= 1.8285$
+	\tcbline
+	$x_{4}=\dfrac{3(1.8285)^4+13}{4(1.8285)^3+1}=1.8282$\\
+	$x_4=1.83$ (2 d.p.)
+}
+\newpage
+
+\chapter*{Module 3}
+\vspace{-30pt}
+\section*{Question 5}
+\qs{5}{(a)(i)}{A fair coin thrown can land on heads $(H)$ or tails $(T)$ and a fair die whose sides are numbered 1 to 6 are thrown simultaneously.\\
+	Determine the sample space of the possible outcomes of the experiment.}{2}
+
+\solu{\vspace{-8pt} \[ \renewcommand{\arraystretch}{0.5}
+		S = \left\{
+		\begin{array}{cccccc}
+			(H, 1), & (H, 2), & (H, 3), & (H, 4), & (H, 5), & (H, 6), \\
+			(T, 1), & (T, 2), & (T, 3), & (T, 4), & (T, 5), & (T, 6)
+		\end{array}
+		\right\}= 12 \text{ outcomes}
+	\] }
+
+\qs{5}{(a)(ii)}{Let $F$ be the event that the die lands on a 5.\\
+	Calculate P$(H|F)$.}{2}
+
+\solu{P$(H|F)= \dfrac{\text{P}(H\cap F)}{\text{P}(F)}$\\
+	P$(H|F)= \dfrac{ \frac{1}{12}}{ \frac{1}{6}}= \dfrac{1}{2}$ \hfill $\text{P}(H\cap F)= \dfrac{ {}^1C_1 {}^1C_1}{12}= \dfrac{1}{12}$}
+
+\qs{5}{(a)(iii)}{State, with reason, whether $(H)$ and $(F)$ are independent events.}{3}
+
+\solu{$\text{P}(H) \times \text{P}(F)=\dfrac{1}{2} \times \dfrac{1}{6} = \dfrac{1}{12} $ \hfill Re: $\text{P}(H\cap F)= \dfrac{1}{12}$\\ [-5pt]
+	Since $\text{P}(H) \times \text{P}(F)=\text{P}(H\cap F)\implies$ the events  $(H)$ and $(F)$ are independent.}
+
+\qs{5}{(b)(i)}{Calculate the number of ways of arranging\\
+	3 letters from the first 6 letters of the alphabet.}{2}
+
+\solu{${}^6P_3= \dfrac{6!}{(6-3)!}=120$ ways\\
+	$\therefore\ $The number of ways of arranging 3 letters from the first 6 letters of the alphabet is 120.
+}
+
+\qs{5}{(b)(ii)}{ALL the letters of the word S U C C E S S.}{3}
+
+\solu{$\dfrac{7!}{3!2!}=420$ ways \hfill Repeated terms: CC \hspace{0.2cm} SSS\\
+	$\therefore\ $The number of ways of arranging all the letters of the word S U C C E S S is 420.}
+\newpage
+
+\qs{5}{(c)}{A committee consists of 5 Mathematics teachers and 7 English teachers. Determine in how many ways a sub-committee may be formed if 2 Mathematics teachers and 3 English teachers are selected in no particular order.}{4}
+
+\solu{
+	\begin{center}
+		\begin{forest}
+			for tree = {
+					edge={-Latex},
+					l sep= 1.2cm,
+					s sep = 1.5cm,
+				}
+				[12 Teachers
+						[5 Mathematics]
+						[7 English]
+				]
+		\end{forest}
+	\end{center}
+	No. of ways $= {}^5C_2 \times  {}^7C_3 = \dfrac{5!}{(5-2)!2!} \times \dfrac{7!}{(7-3)!3!}$\\
+	No. of ways $=350$\\
+	$\implies$ 2 Mathematics and 3 English teachers can be chosen in 350 ways.
+}
+
+\qs{5}{(d)}{A matrix is given by $ \text{\textbf{A}} =
+		\begin{pmatrix}
+			1  & 2 & 5 \\[-4pt]
+			3  & 0 & 2 \\[-4pt]
+			-1 & 4 & 6
+		\end{pmatrix}$.\\ [6pt]
+	Evaluate the determinant of \textbf{A}.
+}{4}
+
+\solu{Det(A)
+	$=1 \renewcommand\arraystretch{0.5}
+		\begin{vmatrix}
+			0 & 2 \\
+			4 & 6
+		\end{vmatrix} -
+		2 \renewcommand\arraystretch{0.5}
+		\begin{vmatrix}
+			3  & 2 \\
+			-1 & 6
+		\end{vmatrix}+
+		5 \renewcommand\arraystretch{0.5}
+		\begin{vmatrix}
+			3  & 0 \\
+			-1 & 4
+		\end{vmatrix}$\\
+	Det(A)$= 1(0 -8) -2(18- (-2)) +5(12-0)$\\
+	Det(A)$= -8 -40 + 60$\\
+	Det(A)$= 12$
+}
+\newpage
+
+\qs{5}{(e)}{A system of linear equations is given as
+	\vspace{-8pt}
+	\begin{align*}
+		x +z   & =1  \\
+		y+z    & =2  \\
+		2y + z & = 1
+	\end{align*}
+	Determine whether the system is consistent.
+}{5}
+
+\solu{ Let: $A={\renewcommand{\arraystretch}{0.7}
+				\left(
+				\begin{array}{ccc|c}
+					1 & 0 & 1 & 1 \\
+					0 & 1 & 1 & 2 \\
+					0 & 2 & 1 & 1
+				\end{array}
+				\right)
+			}$\\[8pt]
+	Reducing to row echelon form:\\[8pt]
+	$A={\renewcommand{\arraystretch}{0.7}
+				\left(
+				\begin{array}{ccc|c}
+					1 & 0 & 1  & 1  \\
+					0 & 1 & 1  & 2  \\
+					0 & 0 & -1 & -3
+				\end{array}
+				\right)}$ \hfill $ R_3 \rightarrow R_3 -2R_2$\\[8pt]
+	$A={\renewcommand{\arraystretch}{0.7}
+				\left(
+				\begin{array}{ccc|c}
+					1 & 0 & 1 & 1 \\
+					0 & 1 & 1 & 2 \\
+					0 & 0 & 1 & 3
+				\end{array}
+				\right)}$ \hfill $ R_3 \rightarrow -1 \times R_3 $\\[8pt]
+
+	\tcbline
+	\setstretch{1.3} Since the row echelon form of the augmented matrix does not contain any contradictory rows, i.e. $\bigl( 0 \enspace 0 \enspace 0 \ \big|\ k \bigr) \text{ where } k \neq 0$, then the augmented matrix must be consistent. Thereby, the system of equations must be consistent.
+}
+\newpage
+
+\section*{Question 6}
+
+\qs{6}{(a)}{Calculate the value of $k$ for which the matrix
+	$\renewcommand\arraystretch{0.5}
+		\begin{pmatrix}
+			1   & 5   \\[4pt]
+			-2k & k+1
+		\end{pmatrix}$
+	is singular.}{4}
+
+\solu{Let: $A=\renewcommand\arraystretch{0.5}
+		\begin{pmatrix}
+			1   & 5   \\[2pt]
+			-2k & k+1
+		\end{pmatrix}$\\[8pt]
+	$\text{Det} (A) =\left[ 1(k+1)\right]- \left[ 5(-2k)\right]$\\
+	$\text{Det} (A) =(k+1) + 10k$\\
+	$\text{Det} (A) =11k + 1$
+	\tcbline
+	$11k + 1=0$ \hfill When matrix $A$ is singular\\
+	$k=-\dfrac{1}{11}$\\
+	The matrix $A$ is singular only when $k=-\dfrac{1}{11}$.
+}
+\newpage
+
+\qs{6}{(b)(i)}{Solve the differential equation\\
+	\hspace*{3.5cm} $\displaystyle\odv{y}{x} - y =x$\\
+	to obtain the general solution.}{8}
+
+\solu{
+	$\displaystyle\odv{y}{x} + (-)y =x$\\
+	is of the form $\displaystyle\odv{y}{x} + P(x)y =Q(x)$ \hfill Where $P(x)=-1$ \qquad $Q(x)=x$\\
+	$\implies ye^{-x}=\displaystyle\int xe^{-x} \odif{x}$
+	\hfill I.F.$ \rightarrow e^{\int -1 \odif{x}}=e^{-x}$
+
+	Let:\\[-6pt]
+	$\begin{aligned}
+			u                       & =x \qquad & \odif{v} & =e^{-x} \odif{x} \\[-8pt]
+			\displaystyle\odv{u}{x} & =1 \qquad & v        & =-e^{-x}
+		\end{aligned}$\\[6pt]
+	$ye^{-x}=-xe^{-x} - \displaystyle\int -1e^{-x} \odif{x}$\\
+	$ye^{-x}=-xe^{-x} + \displaystyle\int e^{-x} \odif{x}$\\
+	$ye^{-x}=-xe^{-x} -e^{-x} + C$ \hfill $C \in \mathbb{R}$\\
+	$y=-x -1 + Ce^{x}$
+}
+
+\qs{6}{(b)(ii)}{Hence, given that $y=1$ when $x=0$, determine the particular solution.}{2}
+
+\solu{Re: $y=-x -1 + Ce^{x}$\\
+	$1=-0-1+Ce^{0}$ \hfill When $y=1$, $x=0$\\
+	$C=2$\\
+	$y=-x -1 + 2e^{x}$ \hfill Is the particular solution
+}
+\newpage
+
+\qs{6}{(c)(i)}{A differential equation is given by $\displaystyle\odv[2]{y}{x} - \displaystyle\odv{y}{x} -2y = e^{3x}$.\\
+	Obtain the complementary function of the differential equation.}{5}
+
+\solu{$\displaystyle\odv[2]{y}{x} - \displaystyle\odv{y}{x} -2y = e^{3x}$\\
+	From the AQE:\\
+	$e^{mx} \left( m^2 -m -2 \right)=0$\\
+	$m^2 -m -2=0 \qquad \text{or} \qquad e^{mx} \neq 0 \\[-8pt]
+		(m-2)(m+1)=0$\\[2pt]
+	$m=2 \qquad or \qquad m=-1$\\
+	Since $m \in \mathbb{R}$ and is distinct:\\
+	$y_{C.F.}= Ae^{2x} + Be^{-x}$ \hfill $A \text{, } B \in \mathbb{R}$
+}
+
+\qs{6}{(c)(ii)}{Determine a particular integral of the differential equation.}{5}
+
+\solu{Let: $y=ae^{3x}$\\
+	$\displaystyle\odv{y}{x}=3ae^{3x}$\\
+	$\displaystyle\odv[2]{y}{x}=9ae^{3x}$\\
+	$9ae^{3x} - 3ae^{3x} -2 \left( ae^{3x} \right) = e^{3x}$\\[-8pt]
+	$9a - 3a -2a=1$ \hfill $\div \ e^{3x}$\\[-6pt]
+	$a=\dfrac{1}{4}$\\[-6pt]
+	$y_{P.I.}= \dfrac{1}{4}e^{3x}$
+}
+\newpage
+
+\qs{6}{(c)(iii)}{Hence, state the general solution of the differential equation.}{1}
+
+\solu{$y= y_{C.F.} + y_{P.I.}$\\
+	$y=  Ae^{2x} + Be^{-x} + \dfrac{1}{4} e^{3x} $
+}
+\vspace{80pt}
+\begin{center}
+	\textbf{\Large{END}}
+\end{center}
+
+\end{document}
